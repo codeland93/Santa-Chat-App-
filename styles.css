@@ -1,0 +1,185 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    color: #fff;
+  }
+  
+  .chat-app {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  header {
+    padding: 20px;
+    background: #c22e2e;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .chat-container {
+    padding: 20px;
+    position: relative;
+  }
+  
+  .chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 2px dashed #c22e2e;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+  }
+  
+  .chat-box .message {
+    margin: 10px 0;
+  }
+  
+  .message.user {
+    text-align: right;
+    color: #007bff;
+  }
+  
+  .message.santa {
+    text-align: left;
+    color: #c22e2e;
+  }
+  
+  form {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #c22e2e;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    background: #c22e2e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background: #d43f3f;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('snowflakes.png') repeat top center;
+    opacity: 0.6;
+    animation: snow 10s linear infinite;
+  }
+  
+  @keyframes snow {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+  /* Avatars */
+.message {
+    display: flex;
+    align-items: center;
+  }
+  
+  .message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  
+  .message.user img {
+    order: 2;
+  }
+  
+  .message.santa img {
+    order: 0;
+  }
+  
+  /* Emoji Panel */
+  .emoji-panel {
+    display: none;
+    margin: 10px 0;
+    background: #fff;
+    border: 2px solid #c22e2e;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .emoji-panel span {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .emoji-panel span:hover {
+    transform: scale(1.3);
+  }
+  /* Snowfall Container */
+.snowfall-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  /* Individual Snowflake Style */
+  .snowflake {
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    animation: fall infinite linear;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100vh);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  @keyframes fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with Santa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="snowfall-container"></div> <!-- Snowfall effect -->
+    <div class="chat-app">
+      <header>
+        <h1>🎅 Chat with Santa 🎄</h1>
+      </header>
+      <div class="chat-container">
+        <div class="chat-box" id="chatBox"></div>
+        <div class="emoji-panel" id="emojiPanel">
+          ❄️ 😀 🎅 🌟 🎄 🎁 🦌 ❄️ 🍪 🥛 🔔
+        </div>
+        <form id="messageForm">
+          <input type="text" id="userInput" placeholder="Type your message..." required>
+          <button type="button" id="emojiToggle">😊</button>
+          <button type="submit">🎁 Send</button>
+        </form>
+      </div>
+    </div>
+    <audio id="santaAudio" src="Jingle Bell Rock.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+  
+</html>
